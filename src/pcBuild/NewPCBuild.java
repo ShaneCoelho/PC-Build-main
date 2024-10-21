@@ -3079,8 +3079,8 @@ public class NewPCBuild {
 					int count = 0;
 					Class.forName("com.mysql.jdbc.Driver");
 					// Change Oracle DB Username And Password
-					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "SYSTEM",
-							"password");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pc-build", "root",
+							"");
 					Statement st = con.createStatement();
 					ResultSet r = st.executeQuery("select count(*) as res from pcbuilds where mobile = '" + MobileNumber
 							+ "' and buildname = '" + buildName.getText() + "'");
@@ -3268,8 +3268,8 @@ public class NewPCBuild {
 					int builds = 0;
 					Class.forName("com.mysql.jdbc.Driver");
 					// Change Oracle DB Username And Password
-					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "SYSTEM",
-							"password");
+					Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pc-build", "root",
+							"");
 					Statement st = con.createStatement();
 					ResultSet r = st.executeQuery(
 							"select count(*) as res from pcbuserdetails where mobile = '" + viewMobile.getText() + "'");
